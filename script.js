@@ -153,10 +153,10 @@ function alternarFiltroSemana() {
     const botao = document.getElementById('botao-toggle');
     if (mostrandoTodas) {
         atualizarTabela(dadosSemana);
-        botao.textContent = 'Mostrar apenas de hoje';
+        botao.textContent = 'Alterar exibição';
     } else {
         atualizarTabela(dadosHoje);
-        botao.textContent = 'Mostrar todas da semana';
+        botao.textContent = 'Alterar exibição';
     }
 
 }
