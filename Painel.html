@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js" defer></script>
+    <title>Painel</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="logors.png" alt="Logo" class="logo">
+          <h1>PAUTA DE AUDIÊNCIAS E SESSÕES DE JULGAMENTO DO DIA</h1>
+    </header>
+    <main id="content" style="display: flex; flex-direction: column; gap: 20px; align-items: stretch; padding: 20px;">
+      <div class="card destaque" style="min-width: 300px;">
+        <h2>Próxima Audiência:</h2>
+        <div id="audiencia-destaque"></div> 
+        <div id="hora-destaque"></div>
+
+        <div class="destaque-content">
+            <div id="data" style="font-size: 20px; color: gray;"></div>
+          <div class="info">
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="flex: 1;">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Hora</th>
+              <th>Audiência</th>
+              <th>Processo</th>
+              <th>Cliente principal</th>
+              <th>Advogado</th>
+              <th>Preposto</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <button id="botaocard" onclick="alternarFiltroSemana()">Mostrar todas da semana</button>
+        <div class = cards-container>
+          <div class="cardhoje"></div><div class="cardamanha"></div><div class="cardsemana"></div>
+        </div>
+        <h3>Já Realizadas</h3>
+        <div id="realizadas-container">
+          <div id="realizadas-cards">
+          </div>
+        </div>
+        <div id="botaomostrar"></div>
+      </div>
+    </main>
+    <input type="file" id="upload" accept=".xls, .xlsx" />
+  </body>
+</html>

@@ -1,0 +1,295 @@
+body {
+    margin: 20px;
+    padding: 0;
+    background-color: #1f0707;
+    font-family: Tahoma, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+header {
+    background-color: #1f0707;
+    color: white; 
+    margin: 0;
+    border-radius: 10px;
+    width: 100;
+}
+
+.card {
+    background-color: #E5DACB;
+    padding: 20px;
+    width: 100;
+    flex-grow: 1;
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow-x: auto;
+}
+
+.piscando {
+    animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+    0%, 100% { color: red; }
+    50% { color: transparent; }
+}
+
+.card.destaque {
+    background-color: #E5DACB;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+
+.destaque-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.info {
+    width: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card.destaque .info span {
+    white-space: nowrap;
+    font-size: 1.0em;
+}
+
+.card.destaque .info span strong {
+    font-weight: bold;
+}
+
+.card.destaque .info span + span {
+    margin-left: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #CBBEAA;
+    text-align: left;
+}
+
+th {
+    background-color: #4E3833;
+    color: whitesmoke;
+    text-align: center;
+}
+
+td {
+    background-color: #FFFFFF;
+    color: black;
+    font-size: 1.2em;
+}
+
+tr:nth-child(even) td {
+    background-color: #E0D4C4;
+}
+
+tr:hover {
+    background-color: #CBBEAA;
+}
+
+#content {
+    background-color: #4E3833;
+    padding: 20px;
+    width: 100;
+    flex-grow: 1;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#titulocarddestaque {
+    text-align: center;
+    width: 100;
+}
+#hora-destaque {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#audiencia-destaque {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+#data {
+    font-size: 16px;
+    color: #6A5B4E;
+    margin-top: 4px;
+}
+
+@keyframes piscar-vermelho {
+    0% { background-color: #ffe5e5; }
+    50% { background-color: #ff0000; color: white; }
+    100% { background-color: #ffe5e5; }
+}
+
+@keyframes piscar-laranja {
+    0% { background-color: #fff3e0; }
+    50% { background-color: #ff9800; color: white; }
+    100% { background-color: #fff3e0; }
+}
+
+.card.destaque.piscando-vermelho {
+    animation: piscar-vermelho 3s infinite;
+}
+
+.card.destaque.piscando-laranja {
+    animation: piscar-laranja 3s infinite;
+}
+
+#realizadas-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+#realizadas-container {
+    white-space: nowrap;
+    overflow-x: auto;
+    font-size: 1rem;
+    color: #4F3128;
+    padding: 10px;
+}
+
+.card-realizado {
+    display: inline;
+    margin-right: 8px;
+}
+.realizada {
+    background-color: #fff;
+    border-left: 5px solid #4F3128;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.realizada .info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+}
+
+.realizada .info span {
+    white-space: nowrap;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;   
+    flex-wrap: nowrap;
+}
+
+.logo-container img {
+    max-height: 150px;
+    height: auto;
+    justify-content: center;
+    width: auto;
+}
+
+.logo-container h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: white;
+    flex-shrink: 1;
+}
+.cards-container {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+.cardhoje {
+    background-color: #4F3128;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.cardamanha {
+    background-color: #4F3128;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.cardsemana {
+    background-color: #4F3128;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+#botaocard {
+    background-color: #4F3128;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+}
+
+#botaocard:hover {
+    background-color: #3c241d;
+    transform: translateY(-2px);
+}
+
+#botaocard:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
